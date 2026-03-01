@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>+VIDA ST - Sua Saúde, Reinventada</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="site/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-brand-light font-sans text-brand-dark antialiased">
+    
+    <!-- Overlay para o menu mobile -->
+    <div id="menu-overlay" class="fixed inset-0 bg-black/40 z-30 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+
+    <!-- CABEÇALHO CENTRALIZADO -->
+    <header id="main-header" class="bg-brand-light/80 backdrop-blur-lg sticky top-0 z-40 transition-all duration-300">
+        <div class="container mx-auto px-6 h-24 flex justify-between items-center relative">
+            
+            <!-- Esquerda: Navegação Desktop / Botão Menu Mobile -->
+            <div class="flex-1 flex justify-start">
+                <!-- Botão do Menu Mobile -->
+                <button id="mobile-menu-button" class="md:hidden text-brand-dark z-50">
+                    <span class="hamburger-line line-1"></span>
+                    <span class="hamburger-line line-2"></span>
+                    <span class="hamburger-line line-3"></span>
+                </button>
+                 <!-- Navegação para Desktop -->
+                <nav class="hidden md:flex items-center space-x-8 text-base font-medium">
+                    <a href="#vantagens" class="nav-link relative text-gray-600 hover:text-brand-dark transition">Vantagens</a>
+                    <a href="#especialidades" class="nav-link relative text-gray-600 hover:text-brand-dark transition">Especialidades</a>
+                    <a href="#depoimentos" class="nav-link relative text-gray-600 hover:text-brand-dark transition">Depoimentos</a>
+                </nav>
+            </div>
+
+            <!-- Centro: Logo (Posicionamento Absoluto) -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                 <a href="#" class="flex items-center transition-transform duration-300 hover:scale-105">
+                    <!-- MODIFIQUE AQUI: Coloque o caminho para sua imagem no 'src' -->
+                    <img src="site/img/favicon.png  " alt="Logo +VIDA ST" class="h-20 w-auto">
+                </a>
+            </div>
+           
+            <!-- Direita: Botão CTA (Desktop) -->
+            <div class="flex-1 flex justify-end">
+                 <a href="login/index.html" class="btn-primary group hidden md:inline-flex items-center gap-2 py-2 px-5 rounded-lg font-semibold">
+                    <span>Agendar Agora</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu Mobile com nova estrutura e animação -->
+    <div id="mobile-menu" class="fixed top-0 right-0 h-full w-full max-w-xs bg-brand-light z-40 p-8 flex flex-col space-y-6 transform translate-x-full transition-transform duration-300 ease-in-out">
+        <div class="flex-grow pt-16 flex flex-col space-y-4">
+             <a href="#vantagens" class="text-gray-700 hover:text-brand-dark transition text-2xl font-medium">Vantagens</a>
+            <a href="#especialidades" class="text-gray-700 hover:text-brand-dark transition text-2xl font-medium">Especialidades</a>
+            <a href="#depoimentos" class="text-gray-700 hover:text-brand-dark transition text-2xl font-medium">Depoimentos</a>
+        </div>
+        <a href="#cta" class="block text-center w-full py-4 px-6 rounded-lg btn-primary font-bold text-lg">
+            Agendar Agora
+        </a>
+    </div>
+
+    <main>
+        <!-- SEÇÃO HERO -->
+        <section class="relative overflow-hidden pt-8">
+            <div class="container mx-auto px-6 py-24 md:py-32 text-center">
+                <div class="max-w-4xl mx-auto">
+                    <h1 class="text-5xl md:text-7xl font-extrabold text-brand-dark tracking-tighter leading-tight fade-in-up">
+                        Sua saúde, <span class="font hero-gradient-text">sem filas,</span> sem complicação.</span>
+                    </h1>
+                    <p class="mt-6 text-lg md:text-xl text-gray-600 max-w-2xl mx-auto fade-in-up" style="transition-delay: 100ms;">
+                         Agende consultas e exames online em minutos. <br> Poupe tempo e foque no seu bem-estar!
+                    </p>
+                    <div class="mt-10 fade-in-up" style="transition-delay: 200ms;">
+                         <a href="login/index.html" class="btn-primary inline-flex items-center justify-center gap-2 py-3 px-8 rounded-lg text-lg font-bold">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5v-4.5Z" /></svg>
+                            Agendar Consulta
+                        </a>
+                    </div>
+                </div>
+            </div>
+             <div class="absolute inset-0 -z-10" aria-hidden="true">
+                <div class="absolute left-[50%] top-0 h-[50rem] w-[100rem] -translate-x-1/2 bg-[radial-gradient(50%_50%_at_50%_50%,#FDEBE9,transparent)]"></div>
+            </div>
+        </section>
+
+        <!-- NOVA SEÇÃO AÇÕES RÁPIDAS -->
+        <section id="acoes-rapidas" class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                 <div class="text-center fade-in-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-dark tracking-tight">Ações Rápidas</h2>
+                </div>
+                <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <a href="#" class="card-base text-center p-6 rounded-2xl fade-in-up flex flex-col items-center justify-center" style="transition-delay: 100ms;">
+                        <span class="text-4xl">📝</span>
+                        <h3 class="mt-3 text-lg font-semibold text-brand-dark">Seus Agendamentos</h3>
+                    </a>
+                    <a href="#" class="card-base text-center p-6 rounded-2xl fade-in-up flex flex-col items-center justify-center" style="transition-delay: 200ms;">
+                        <span class="text-4xl">💊</span>
+                        <h3 class="mt-3 text-lg font-semibold text-brand-dark">Medicamentos Disponíveis</h3>
+                    </a>
+                    <a href="#" class="card-base text-center p-6 rounded-2xl fade-in-up flex flex-col items-center justify-center" style="transition-delay: 300ms;">
+                        <span class="text-4xl">🩺</span>
+                        <h3 class="mt-3 text-lg font-semibold text-brand-dark">Prioridade de Atendimento</h3>
+                    </a>
+                    <a href="#" class="card-base text-center p-6 rounded-2xl fade-in-up flex flex-col items-center justify-center" style="transition-delay: 400ms;">
+                        <span class="text-4xl">⌚</span>
+                        <h3 class="mt-3 text-lg font-semibold text-brand-dark">Histórico de consultas</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO VANTAGENS -->
+        <section id="vantagens" class="py-16 md:py-24 bg-brand-extralight">
+            <div class="container mx-auto px-6">
+                <div class="text-center fade-in-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-dark tracking-tight">Cuidar da saúde nunca foi tão fácil</h2>
+                    <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Nossa plataforma foi desenhada para trazer agilidade e tranquilidade para sua vida.</p>
+                </div>
+                <div class="mt-16 grid md:grid-cols-3 gap-8">
+                    <!-- Vantagem 1 -->
+                    <div class="card-base text-center p-8 rounded-2xl fade-in-up" style="transition-delay: 100ms;">
+                        <div class="bg-brand-primary-light text-brand-primary rounded-lg w-12 h-12 flex items-center justify-center mx-auto">
+                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+                        </div>
+                        <h3 class="mt-5 text-xl font-bold text-brand-dark">Economize seu tempo</h3>
+                        <p class="mt-2 text-gray-600">Chega de esperar horas. Encontre horários disponíveis e agende sua consulta em poucos cliques.</p>
+                    </div>
+                    <!-- Vantagem 2 -->
+                    <div class="card-base text-center p-8 rounded-2xl fade-in-up" style="transition-delay: 200ms;">
+                        <div class="bg-brand-primary-light text-brand-primary rounded-lg w-12 h-12 flex items-center justify-center mx-auto">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m-7.5-2.962A3 3 0 0 1 3 18.72v-2.172c0-.923.36-1.79.988-2.433l.923-1.107c.433-.518 1.05-.837 1.71-.837H9.75c.66 0 1.277.318 1.71.837l.923 1.107c.629.643.988 1.51.988 2.433v2.172A3 3 0 0 1 12.75 18.72m-7.5 2.962c.414.253.86.444 1.326.597m-1.326-.597a3.001 3.001 0 0 0-2.343-2.343m2.343 2.343c.414-.253.86-.444 1.326-.597m6.354-4.242a3.001 3.001 0 0 0-2.343-2.343m2.343 2.343c.414.253.86.444 1.326.597m-1.326-.597 2.343-2.343m0 0a3.001 3.001 0 0 1 2.343 2.343m-2.343-2.343c-.414-.253-.86-.444-1.326-.597" /></svg>
+                        </div>
+                        <h3 class="mt-5 text-xl font-bold text-brand-dark">Ampla rede de médicos</h3>
+                        <p class="mt-2 text-gray-600">Acesse uma vasta lista de médicos, clínicas e laboratórios, com a confiança que você merece.</p>
+                    </div>
+                    <!-- Vantagem 3 -->
+                    <div class="card-base text-center p-8 rounded-2xl fade-in-up" style="transition-delay: 300ms;">
+                        <div class="bg-brand-primary-light text-brand-primary rounded-lg w-12 h-12 flex items-center justify-center mx-auto">
+                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+                        </div>
+                        <h3 class="mt-5 text-xl font-bold text-brand-dark">Gestão Simplificada</h3>
+                        <p class="mt-2 text-gray-600">Receba lembretes, acesse seu histórico e gerencie suas consultas em um único lugar seguro.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- SEÇÃO ESPECIALIDADES -->
+        <section id="especialidades" class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center fade-in-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-dark tracking-tight">Encontre o especialista que você precisa</h2>
+                    <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Navegue pelas áreas mais procuradas e agende sua consulta com facilidade.</p>
+                </div>
+                <div class="mt-16 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <!-- Cards de Especialidade -->
+                    <a href="#" class="card-base p-6 rounded-xl text-center fade-in-up" style="transition-delay: 100ms;"><h3 class="font-semibold text-lg text-brand-dark">Cardiologia</h3></a>
+                    <a href="#" class="card-base p-6 rounded-xl text-center fade-in-up" style="transition-delay: 150ms;"><h3 class="font-semibold text-lg text-brand-dark">Dermatologia</h3></a>
+                    <a href="#" class="card-base p-6 rounded-xl text-center fade-in-up" style="transition-delay: 200ms;"><h3 class="font-semibold text-lg text-brand-dark">Ginecologia</h3></a>
+                    <a href="#" class="card-base p-6 rounded-xl text-center fade-in-up" style="transition-delay: 250ms;"><h3 class="font-semibold text-lg text-brand-dark">Ortopedia</h3></a>
+                    <a href="#" class="card-base p-6 rounded-xl text-center fade-in-up" style="transition-delay: 300ms;"><h3 class="font-semibold text-lg text-brand-dark">Pediatria</h3></a>
+                    <a href="#" class="card-base p-6 rounded-xl text-center fade-in-up" style="transition-delay: 350ms;"><h3 class="font-semibold text-lg text-brand-dark">Psicologia</h3></a>
+                    <a href="#" class="card-base p-6 rounded-xl text-center fade-in-up" style="transition-delay: 400ms;"><h3 class="font-semibold text-lg text-brand-dark">Oftalmologia</h3></a>
+                    <a href="#" class="card-base p-6 rounded-xl text-center flex flex-col justify-center items-center border-2 border-dashed border-gray-300/80 hover:border-brand-primary fade-in-up" style="transition-delay: 450ms;">
+                        <h3 class="font-semibold text-lg text-gray-500">Ver todas</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO DEPOIMENTOS -->
+        <section id="depoimentos" class="py-16 md:py-24 bg-brand-extralight">
+            <div class="container mx-auto px-6">
+                <div class="text-center fade-in-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-dark tracking-tight">Aprovado por quem mais importa: você.</h2>
+                </div>
+                <div class="mt-16 grid lg:grid-cols-3 gap-8">
+                    <!-- Depoimento 1 -->
+                    <div class="card-base p-8 rounded-2xl fade-in-up" style="transition-delay: 100ms;">
+                        <p class="text-gray-700">"Finalmente consegui marcar um exame para minha mãe sem sair de casa. O sistema é muito rápido e o lembrete por WhatsApp ajudou muito. Recomendo!"</p>
+                        <div class="mt-6 flex items-center"><img class="w-12 h-12 rounded-full object-cover" src="https://placehold.co/100x100/FDEBE9/5D4037?text=MS" alt="Foto de Maria S."><div class="ml-4"><p class="font-bold text-brand-dark">Maria S.</p><p class="text-sm text-gray-500">Usuária Verificada</p></div></div>
+                    </div>
+                    <!-- Depoimento 2 -->
+                     <div class="card-base p-8 rounded-2xl fade-in-up" style="transition-delay: 200ms;">
+                        <p class="text-gray-700">"Como profissional autônomo, meu tempo é curto. A +VIDA ST facilitou demais o agendamento dos meus check-ups anuais. Tudo online, sem burocracia."</p>
+                        <div class="mt-6 flex items-center"><img class="w-12 h-12 rounded-full object-cover" src="https://placehold.co/100x100/FDEBE9/5D4037?text=JP" alt="Foto de João P."><div class="ml-4"><p class="font-bold text-brand-dark">João P.</p><p class="text-sm text-gray-500">Usuário Verificado</p></div></div>
+                    </div>
+                    <!-- Depoimento 3 -->
+                     <div class="card-base p-8 rounded-2xl fade-in-up" style="transition-delay: 300ms;">
+                        <p class="text-gray-700">"A interface é muito limpa e fácil de usar. Encontrei um dermatologista perto do meu trabalho em menos de 5 minutos. Excelente!"</p>
+                        <div class="mt-6 flex items-center"><img class="w-12 h-12 rounded-full object-cover" src="https://placehold.co/100x100/FDEBE9/5D4037?text=AF" alt="Foto de Ana F."><div class="ml-4"><p class="font-bold text-brand-dark">Ana F.</p><p class="text-sm text-gray-500">Usuária Verificada</p></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- NOVA SEÇÃO NOTÍCIAS -->
+        <section id="noticias" class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center fade-in-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-dark tracking-tight">Últimas Notícias & Destaques</h2>
+                </div>
+                <div class="mt-16 grid lg:grid-cols-3 gap-8">
+                    <!-- Notícia Principal -->
+                    <a href="#" class="n1 lg:col-span-2 card-base bg-brand-primary text-white p-8 rounded-2xl flex flex-col justify-between fade-in-up" style="transition-delay: 100ms;">
+                        <div>
+                            <h3 class="text-3xl font-bold">Notícia 1</h3>
+                            <p class="mt-4 text-lg opacity-90">Descubra o Segredo da Longevidade: 5 Hábitos que Transformam sua Vida e aumentam seu bem-estar diário.</p>
+                        </div>
+                        <span class="mt-8 font-semibold inline-block">CLIQUE PARA LER →</span>
+                    </a>
+                    <!-- Sub Notícias -->
+                    <div class="space-y-6 flex flex-col">
+                        <a href="#" class="card-base p-6 rounded-2xl fade-in-up" style="transition-delay: 200ms;">
+                            <h4 class="font-bold text-brand-dark">sub noticia 1</h4>
+                            <p class="mt-1 text-gray-600 text-sm">O impacto da luz azul no ciclo circadiano e como se proteger.</p>
+                        </a>
+                         <a href="#" class="card-base p-6 rounded-2xl fade-in-up" style="transition-delay: 300ms;">
+                            <h4 class="font-bold text-brand-dark">sub noticia 2</h4>
+                            <p class="mt-1 text-gray-600 text-sm">Tendências de fitness para 2025: O que está em alta no treino funcional.</p>
+                        </a>
+                         <a href="#" class="card-base p-6 rounded-2xl fade-in-up" style="transition-delay: 400ms;">
+                            <h4 class="font-bold text-brand-dark">sub noticia 3</h4>
+                            <p class="mt-1 text-gray-600 text-sm">Mitos e verdades sobre suplementos: o que realmente funciona.</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- SEÇÃO FINAL CTA -->
+        <section id="cta" class="pb-16 md:pb-24">
+            <div class="container mx-auto px-6">
+                <div class="relative bg-brand-dark text-white rounded-2xl p-10 md:p-16 text-center overflow-hidden fade-in-up">
+                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-brand-primary/20 rounded-full blur-2xl"></div>
+                    <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-brand-primary/20 rounded-full blur-2xl"></div>
+                    <div class="relative z-10">
+                        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Pronto para simplificar sua saúde?</h2>
+                        <p class="mt-4 max-w-xl mx-auto text-lg opacity-80">Crie sua conta gratuita e comece a agendar suas consultas hoje mesmo. É rápido, seguro e sem custos.</p>
+                        <div class="mt-8">
+                             <a href="login/index.html" class="btn-primary inline-block py-3 px-8 rounded-lg text-lg font-bold">
+                                Começar Agora
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- RODAPÉ PROFISSIONAL -->
+    <footer class="bg-brand-extralight border-t border-gray-200/80">
+        <div class="container mx-auto px-6 pt-16 pb-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <!-- Coluna 1: Logo e Descrição -->
+                <div class="lg:col-span-2">
+                    <a href="#" class="flex items-center space-x-2">
+                        <img src="img\favicon.png" alt="Logo +VIDA ST" class="h-16 w-auto">
+                    </a>
+                    <p class="mt-4 text-gray-600 max-w-sm">
+                        Simplificando o acesso à saúde com tecnologia e cuidado. Agende consultas de forma rápida e segura.
+                    </p>
+                </div>
+                
+                <!-- Coluna 2: Navegação -->
+                <div>
+                    <h3 class="font-bold text-brand-dark tracking-wide">Navegação</h3>
+                    <nav class="mt-4 space-y-3">
+                        <a href="#acoes-rapidas" class="block text-gray-600 hover:text-brand-primary transition">Ações Rápidas</a>
+                        <a href="#vantagens" class="block text-gray-600 hover:text-brand-primary transition">Vantagens</a>
+                        <a href="#especialidades" class="block text-gray-600 hover:text-brand-primary transition">Especialidades</a>
+                        <a href="#noticias" class="block text-gray-600 hover:text-brand-primary transition">Notícias</a>
+                    </nav>
+                </div>
+    
+                <!-- Coluna 3: Legal -->
+                <div>
+                    <h3 class="font-bold text-brand-dark tracking-wide">Legal</h3>
+                    <nav class="mt-4 space-y-3">
+                        <a href="#" class="block text-gray-600 hover:text-brand-primary transition">Política de Privacidade</a>
+                        <a href="#" class="block text-gray-600 hover:text-brand-primary transition">Termos de Uso</a>
+                    </nav>
+                </div>
+    
+            </div>
+            
+            <!-- Barra Inferior -->
+            <div class="mt-12 border-t border-gray-200/80 pt-8 flex flex-col sm:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm text-center sm:text-left">&copy; 2025 +VIDA ST. Todos os direitos reservados.</p>
+                <div class="mt-4 sm:mt-0 flex space-x-4">
+                     <a href="#" class="text-gray-500 hover:text-brand-primary transition">
+                         <span class="sr-only">Instagram</span>
+                         <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 012.153 2.153c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-2.153 2.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.013-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-2.153-2.153c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427A4.902 4.902 0 014.9 4.618c.636-.247 1.363-.416 2.427-.465C8.35 2.013 8.704 2 11.135 2h1.18zM12 8.25a3.75 3.75 0 100 7.5 3.75 3.75 0 000-7.5zM12 13.5a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm4.94-5.94a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z" clip-rule="evenodd" />
+                        </svg>
+                     </a>
+                     <a href="#" class="text-gray-500 hover:text-brand-primary transition">
+                         <span class="sr-only">Facebook</span>
+                         <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
+                        </svg>
+                     </a>
+                     <a href="#" class="text-gray-500 hover:text-brand-primary transition">
+                         <span class="sr-only">LinkedIn</span>
+                          <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 114.128 0 2.063 2.063 0 01-2.065 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z" />
+                          </svg>
+                     </a>
+                 </div>
+            </div>
+        </div>
+    </footer>
+ <script src="site/js/script.js"></script>
+</body>
+</html>
+
